@@ -17,4 +17,4 @@ As a data engineer you have asked all the employees to show their preferences on
 - If you want to make the maintenance guy happy, a basketball stadium must be around 10 Km.
 - The office dog—"Dobby" needs a hairdresser every month. Ensure there's one not too far away.
 
-Please see the map here: ![map_venues](https://github.com/paulaRMachado/Project-III-GEO/blob/main/image/map_venues.html)
+Please see the map here: ![map_allvenues](https://github.com/paulaRMachado/Project-III-GEO/blob/main/image/map_allvenues.html)
