@@ -2,6 +2,7 @@
 # Project III - GEOmover
 
 ##Introduction
+
 This project cover the following scenario:
 
 As a data engineer you have asked all the employees to show their preferences on where to place the new office. Your goal is to place the new company offices in the best place for the company to grow. You have to find a place that more or less covers all the following requirements :
@@ -15,3 +16,5 @@ As a data engineer you have asked all the employees to show their preferences on
 - The CEO is vegan.
 - If you want to make the maintenance guy happy, a basketball stadium must be around 10 Km.
 - The office dog—"Dobby" needs a hairdresser every month. Ensure there's one not too far away.
+
+<iframe src="image/possible_venues.html" width="800" height="600"></iframe>
