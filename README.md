@@ -68,7 +68,48 @@ Analizing how the list of cities with design companies intersects with Gaming an
 ### Search for an specific area within SAN FRANCISCO
 In order to stay close to successfull startups that raised over US$1M, let's check out where these companies are located and how close they are to the DESIGN company.
 
-![map_allvenues](image/Desired_area.jpg)
+![](image/Desired_area.jpg)
+
+![Location of the most valued startups](image/most_valued_startups.html)
+
+Marked with a circle is the desired are. Let's now see wich offices could be good matches to the new company and its 87 employees.
+
+A quick query through the database shows the number of offices with adequate size:
+``` python
+condition1 = {"number_of_employees":{"$lt": 120}}
+condition2 = {"number_of_employees":{"$gte": 90}}
+condition3 = {"offices.city":"San Francisco"}
+query = {"$and":[condition1,condition2,condition3]}
+
+pipeline = [
+    {"$match": query},
+    {"$unwind": "$offices"},
+    {"$match": {"offices.city": "San Francisco"}},
+    {"$project": {"_id": 0, "name": 1, "latitude": "$offices.latitude", "longitude": "$offices.longitude", "address": "$offices.address1"}}
+]
+```
+Let's check in the map:
+![](image/possible_offices.jpg)
+
+![Possible offices map](image/possible_offices.html)
+
+### Narrowing down the options
+Now let's check the other demands from the staff.
+1. Starbucks
+2. Schools
+3. Bars
+4. Vegan places for eating 
+5. Grooming places for pets
+
+![](image/most_relevant_area_heatmap.jpg)
+![Condensed heatmaps](image/heatmap_CONDENSED_venues.html)
+
+![Separate heatmaps](image/heatmap_separate_venues.html)
+
+The heatmap shows that the area right bellow the location of the Design Company has concentrated most services that the empployees deem important, narrowing the selection of possible offices to:
+ - Exente: 685, Market Street
+ - hi5: 55 Second Street
+ - Twilio: 645, Harrison
 
 ## Technologies
 For this project eight different libraries were used:
@@ -80,3 +121,5 @@ For this project eight different libraries were used:
 - Requests
 - Json
 - Folium
+
+## Conclusions
