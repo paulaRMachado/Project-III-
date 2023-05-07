@@ -121,15 +121,24 @@ To make the maintenace guy happy, a Basketball stadium is within 2,5km as shown 
 ![Final decision Map](image/narrowing_venues.html)
 
 ## Conclusion
-[x] There must be some nearby companies that also do design.
-[ ] 30% of the company staff have at least 1 child. - The nearst school is several blocks away :pleading_face:
-[x] It should be near successful tech startups that have raised at least US$1M.
-[x] Executives like Starbucks A LOT.
-[x] Account managers need to travel a lot.
-[X] Everyone in the company is between 25 and 40, give them some place to go party.
-[x] The CEO is vegan.
-[ ] If you want to make the maintenance guy happy, a basketball stadium must be around 10 Km.
-[x] The office dog—"Dobby" needs a hairdresser every month. Ensure there's one not too far away.
+
+:white_check_mark: There must be some nearby companies that also do design.
+
+:x: 30% of the company staff have at least 1 child. - The nearst school is several blocks away :pleading_face:
+
+:white_check_mark: It should be near successful tech startups that have raised at least US$1M.
+
+:white_check_mark: Executives like Starbucks A LOT.
+
+:white_check_mark: Account managers need to travel a lot.
+
+:white_check_mark: Everyone in the company is between 25 and 40, give them some place to go party.
+
+:white_check_mark: The CEO is vegan.
+
+:white_check_mark: If you want to make the maintenance guy happy, a basketball stadium must be around 10 Km.
+
+:white_check_mark: The office dog—"Dobby" needs a hairdresser every month. Ensure there's one not too far away.
 
 ![](https://i.pinimg.com/originals/1c/b0/5e/1cb05ecc2f4f17013e6d574834044585.jpg)
 
