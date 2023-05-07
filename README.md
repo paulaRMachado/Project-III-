@@ -63,7 +63,7 @@ Top 3 web cities:
 - New York has 65;
 - Palo Alto 22.
 
-Analizing how the list of cities with design companies intersects with Gaming and Web companies, the most appropriate city for the office would be SAN FRANCISCO, eventhough there is a lot of **competiton**, there is also potential **talent available in the city**.
+Analizing how the list of cities with design companies intersects with Gaming and Web companies, the most appropriate city for the office would be **SAN FRANCISCO**, eventhough there is a lot of **competiton**, there is also potential **talent available in the city**.
 
 ### Search for an specific area within SAN FRANCISCO
 In order to stay close to successfull startups that raised over US$1M, let's check out where these companies are located and how close they are to the DESIGN company.
@@ -106,10 +106,32 @@ Now let's check the other demands from the staff.
 
 ![Separate heatmaps](image/heatmap_separate_venues.html)
 
-The heatmap shows that the area right bellow the location of the Design Company has concentrated most services that the empployees deem important, narrowing the selection of possible offices to:
+The heatmap shows that the area right bellow the location of the Design Company concentrates the most services that the empployees deem important, narrowing the selection of possible offices to:
  - Exente: 685, Market Street
  - hi5: 55 Second Street
  - Twilio: 645, Harrison
+ - eBuddy: 55, Post Street
+
+### Choosing a location
+When pinpointing all the venues to cover the staff requirements, it becomes evident that the EXENT office is the one that has the most services available in the shortest distances and is closest to second best rated vegan restaurant in the city. The location also is 2 blocks away to a Park, so staff could enjoy meals outdoors and relax. Acess to the San Francisco International Airport is facilitated by the train station.
+
+To make the maintenace guy happy, a Basketball stadium is within 2,5km as shown in the map.
+
+![](image/final_plot.jpg)
+![Final decision Map](image/narrowing_venues.html)
+
+## Conclusion
+[x] There must be some nearby companies that also do design.
+[ ] 30% of the company staff have at least 1 child. - The nearst school is several blocks away :pleading_face:
+[x] It should be near successful tech startups that have raised at least US$1M.
+[x] Executives like Starbucks A LOT.
+[x] Account managers need to travel a lot.
+[X] Everyone in the company is between 25 and 40, give them some place to go party.
+[x] The CEO is vegan.
+[ ] If you want to make the maintenance guy happy, a basketball stadium must be around 10 Km.
+[x] The office dog—"Dobby" needs a hairdresser every month. Ensure there's one not too far away.
+
+![](https://i.pinimg.com/originals/1c/b0/5e/1cb05ecc2f4f17013e6d574834044585.jpg)
 
 ## Technologies
 For this project eight different libraries were used:
@@ -121,5 +143,3 @@ For this project eight different libraries were used:
 - Requests
 - Json
 - Folium
-
-## Conclusions
