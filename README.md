@@ -91,7 +91,7 @@ pipeline = [
 Let's check in the map:
 ![](image/possible_offices.jpg)
 
-![Possible offices map](image/possible_offices.html)
+![Possible Offices Map](image/possible_offices.html)
 
 ### Narrowing down the options
 Now let's check the other demands from the staff.
@@ -103,9 +103,9 @@ Now let's check the other demands from the staff.
 
 ![](image/most_relevant_area_heatmap.jpg)
 
-![Condensed heatmaps](image/heatmap_CONDENSED_venues.html)
+![Condensed Heatmaps](image/heatmap_CONDENSED_venues.html)
 
-![Separate heatmaps](image/heatmap_separate_venues.html)
+![Separate Heatmaps](image/heatmap_separate_venues.html)
 
 The heatmap shows that the area right bellow the location of the Design Company concentrates the most services that the employees deem important, narrowing the selection of possible offices to:
  - Exente: 685, Market Street
@@ -117,11 +117,11 @@ The heatmap shows that the area right bellow the location of the Design Company 
 
 When pinpointing all the venues to cover the staff requirements, it becomes evident that the EXENT office is the one that has the most services available in the shortest distances and is closest to second best rated vegan restaurant in the city. The location also is 2 blocks away from a Park, so staff could enjoy meals outdoors and relax. Acess to the San Francisco International Airport is facilitated by the train station. There is also a Ferry Station nearby if necessary.
 
-To make the maintenace guy happy, a Basketball stadium is within 2,5km as shown in the map.
+To make the maintenace guy happy, a Basketball Stadium is within 2,5km as shown in the map.
 
 ![](image/final_plot.jpg)
 
-![Final decision Map](image/narrowing_venues.html)
+![Final Decision Map](image/narrowing_venues.html)
 
 ## Conclusion
 
