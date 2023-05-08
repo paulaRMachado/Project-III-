@@ -4,6 +4,8 @@ from getpass import getpass
 from dotenv import load_dotenv
 import os
 import requests
+from bs4 import BeautifulSoup
+import time
 
 # Hidding my token for FourSquare
 load_dotenv()
@@ -144,5 +146,38 @@ def short_list():
 
     shortlist = list(c.aggregate(pipeline))
     return shortlist
+# For the bonus
+def scrape_offices ():
+    url = "https://property.jll.com/rent-office/san-francisco"
+    html = requests.get(url)
+    soup = BeautifulSoup(html.content, "html.parser")
 
+    result_address = soup.find_all("span", attrs = {"class": "SRPPropertyCard__address"})
+    result_metric = soup.find_all("span", attrs = {"class": "PropertyMetric__item"})
+    result_title = soup.find_all("span", attrs = {"class": "SRPPropertyCard__title"})
+    
+    list_title = [i.getText() for i in result_title]
+    list_address = [i.getText() for i in result_address]
+    list_metric = [i.getText() for i in result_metric]              
+    del list_address[1::2]
+    del list_metric[0::2]
 
+    places = {"title":list_title,
+            "address":list_address,
+            "metric":list_metric}
+    listings = pd.DataFrame(places)
+
+    return listings
+
+def get_coordinates(address):
+    url_geocode = f"https://geocode.xyz/{address}%2C%20San%20Francisco?json=1"
+    
+    try:
+        time.sleep(30)
+        res = requests.get(url_geocode).json()
+        return res["latt"], res["longt"]
+    
+    except:
+        print(f"Sorry, no matches for {address}")
+        time.sleep(15)
+        get_coordinates(address)
