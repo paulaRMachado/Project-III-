@@ -18,10 +18,10 @@ As a data engineer your goal is to place the new company offices in the best are
 - The office dog—"Dobby" needs a hairdresser every month. Ensure there's one not too far away.
 
 ## Description
-### General search
-The select approach to this project was **OPTION A**, that consists in acquiring the office of an existing company in the database.
+### General search :compass:
+The selected approach to this project was **OPTION A**, that consists in acquiring the office of an existing company in the database.
 
-For the business to thrive it is important to stay close and connected to design companies and startups so there could be potential exchange.
+For business to thrive it is important to stay close and connected to design companies and startups so there could be potential exchange.
 Search in Mongo for these locations were:
 
 ```python
@@ -63,7 +63,7 @@ Top 3 web cities:
 - New York has 65;
 - Palo Alto 22.
 
-Analizing how the list of cities with design companies intersects with Gaming and Web companies, the most appropriate city for the office would be **SAN FRANCISCO**, eventhough there is a lot of **competiton**, there is also potential **talent available in the city**.
+Analizing how the list of cities with design companies intersects with Gaming and Web companies, the most appropriate city for the office would be **SAN FRANCISCO**, even though there is a lot of **competiton**, there is also potential **talent available in the city**.
 
 ### Search for an specific area within SAN FRANCISCO
 In order to stay close to successfull startups that raised over US$1M, let's check out where these companies are located and how close they are to the DESIGN company.
@@ -72,7 +72,7 @@ In order to stay close to successfull startups that raised over US$1M, let's che
 
 ![Location of the most valued startups](image/most_valued_startups.html)
 
-Marked with a circle is the desired are. Let's now see wich offices could be good matches to the new company and its 87 employees.
+Marked with a circle is the desired area. Let's now see wich offices could make good matches to the new company and its 87 employees.
 
 A quick query through the database shows the number of offices with adequate size:
 ``` python
@@ -102,29 +102,32 @@ Now let's check the other demands from the staff.
 5. Grooming places for pets
 
 ![](image/most_relevant_area_heatmap.jpg)
+
 ![Condensed heatmaps](image/heatmap_CONDENSED_venues.html)
 
 ![Separate heatmaps](image/heatmap_separate_venues.html)
 
-The heatmap shows that the area right bellow the location of the Design Company concentrates the most services that the empployees deem important, narrowing the selection of possible offices to:
+The heatmap shows that the area right bellow the location of the Design Company concentrates the most services that the employees deem important, narrowing the selection of possible offices to:
  - Exente: 685, Market Street
  - hi5: 55 Second Street
  - Twilio: 645, Harrison
  - eBuddy: 55, Post Street
 
-### Choosing a location
-When pinpointing all the venues to cover the staff requirements, it becomes evident that the EXENT office is the one that has the most services available in the shortest distances and is closest to second best rated vegan restaurant in the city. The location also is 2 blocks away to a Park, so staff could enjoy meals outdoors and relax. Acess to the San Francisco International Airport is facilitated by the train station.
+### Choosing a location :pushpin:
+
+When pinpointing all the venues to cover the staff requirements, it becomes evident that the EXENT office is the one that has the most services available in the shortest distances and is closest to second best rated vegan restaurant in the city. The location also is 2 blocks away from a Park, so staff could enjoy meals outdoors and relax. Acess to the San Francisco International Airport is facilitated by the train station. There is also a Ferry Station nearby if necessary.
 
 To make the maintenace guy happy, a Basketball stadium is within 2,5km as shown in the map.
 
 ![](image/final_plot.jpg)
+
 ![Final decision Map](image/narrowing_venues.html)
 
 ## Conclusion
 
 :white_check_mark: There must be some nearby companies that also do design.
 
-:x: 30% of the company staff have at least 1 child. - The nearst school is several blocks away :pleading_face:
+:x: 30% of the company staff have at least 1 child. - The nearest school is several blocks away :pleading_face:
 
 :white_check_mark: It should be near successful tech startups that have raised at least US$1M.
 
@@ -142,6 +145,12 @@ To make the maintenace guy happy, a Basketball stadium is within 2,5km as shown 
 
 ![](https://i.pinimg.com/originals/1c/b0/5e/1cb05ecc2f4f17013e6d574834044585.jpg)
 
+
+### Coordinates
+Exent -- 
+latitude: 37.787646
+longitude: -122.402759
+
 ## Technologies
 For this project eight different libraries were used:
 - Pymongo
@@ -152,3 +161,4 @@ For this project eight different libraries were used:
 - Requests
 - Json
 - Folium
+
