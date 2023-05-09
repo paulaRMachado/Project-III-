@@ -151,7 +151,7 @@ latitude: 37.787646
 longitude: -122.402759
 
 ## Technologies
-For this project eight different libraries were used:
+For this project nine different libraries were used:
 - Pymongo
 - Pandas
 - Getpass
@@ -160,4 +160,13 @@ For this project eight different libraries were used:
 - Requests
 - Json
 - Folium
+- Time
 
+## BONUS
+For the bonus part of the project: Our offer to buy the Exent office space was rejected so in order to find another space, a Real State agent from JLL Properties was contacted. Keeping the search in the same previous area, here are the space available for rental and their squared footage.
+![](image/Bonus.png)
+
+Using the same criteria as before, the select office from JLL Properties chose was the California Federal Savings building with 2,000 sf. It is still very close the second best vegan restaurant in town, only a bit futher away from the park. 
+
+### New coordinates
+California Federal Savings Building: 37.78882, -122.40365
