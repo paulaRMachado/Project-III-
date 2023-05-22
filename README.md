@@ -21,35 +21,49 @@ As a data engineer your goal is to place the new company offices in the best are
 ### General search :compass:
 The selected approach to this project was **OPTION A**, that consists in acquiring the office of an existing company in the database.
 
-For business to thrive it is important to stay close and connected to design companies and startups so there could be potential exchange.
-Search in Mongo for these locations were:
+For business to thrive it is important to stay close and connected to design companies and startups so there could be potential exchange. So these are the top priorities:
+
+:bangbang: Nearby design companies.
+
+:bangbang: Nearby successful tech startups.
+
+#### Where are these companies?
+Searching through the Mongo db for these locations we have:
 
 ```python
-#DESIGN companies
+# for DESIGN companies
 query = {"category_code":"design"}
 projection = {"name":1, "_id":0, "offices.city":1}
 desing = list(c.find(query, projection))
 ```
-The number of matches were:
-- San Francisco    1
-- Collingwood      1
-- Berlin           1
-- Ellensburg       1
-- Brooklyn         1
-- London           1
+There were only a few matches:
+| City | # offices |
+| ---- | :-----: |
+| San Francisco | 1 |
+| Collingwood   | 1 |
+| Berlin        | 1 |
+| Ellensburg    | 1 |
+| Brooklyn      | 1 |
+| London        | 1 |
 
 
 ```python
-#GAMING companies - competition/exchange
+# for GAMING companies - competition/exchange
 condition1 = {"category_code":"games_video"}
 condition2 = {"funding_rounds.raised_amount":{"$gt": 1000000}}
 query = {"$and":[condition1,condition2]}
 projection = {"name":1, "_id":0, "offices.city":1}
+games = list(c.find(query, projection))
 ```
-Top 3 gaming cities:
-- San Francisco has 39 companies;
-- New York has 30;
-- Los Angeles has 11.
+Theses are the top matches:
+| City | # offices |
+| ---- | :-----: |
+| San Francisco | 39 |
+| New York      | 30 |
+| Los Angeles   | 11 |
+| Paris         | 8 |
+
+
 
 ```python
 #WEB related companies 
@@ -57,20 +71,25 @@ condition1 = {"category_code":"web"}
 condition2 = {"funding_rounds.raised_amount":{"$gt": 1000000}}
 query = {"$and":[condition1,condition2]}
 projection = {"name":1, "_id":0, "offices.city":1}
+web = list(c.find(query, projection))
 ```
-Top 3 web cities:
-- San Francisco has 71 companies;
-- New York has 65;
-- Palo Alto 22.
+Theses are the top matches:
+| City | # offices |
+| ---- | :-----: |
+| San Francisco | 71 |
+| New York      | 65 |
+| Palo Alto     | 22 |
+| Seattle       | 20 |
+| London       | 20 |
 
-Analizing how the list of cities with design companies intersects with Gaming and Web companies, the most appropriate city for the office would be **SAN FRANCISCO**, even though there is a lot of **competiton**, there is also potential **talent available in the city**.
+Analizing how the list of cities with design companies intersects with Gaming and Web companies, the most appropriate city for the office would be **SAN FRANCISCO**, even though there is a lot of **competiton**, there is also potential **talent available in the city** and other cities don't have design companies nearby.
 
 ### Search for an specific area within SAN FRANCISCO
 In order to stay close to successfull startups that raised over US$1M, let's check out where these companies are located and how close they are to the DESIGN company.
 
 ![](image/Desired_area.jpg)
+*The maps in this project are interactive but GitHub does not show them.
 
-![Location of the most valued startups](image/most_valued_startups.html)
 
 Marked with a circle is the desired area. Let's now see wich offices could make good matches to the new company and its 87 employees.
 
@@ -91,7 +110,6 @@ pipeline = [
 Let's check in the map:
 ![](image/possible_offices.jpg)
 
-![Possible Offices Map](image/possible_offices.html)
 
 ### Narrowing down the options
 Now let's check the other demands from the staff.
@@ -103,8 +121,6 @@ Now let's check the other demands from the staff.
 
 ![](image/most_relevant_area_heatmap.jpg)
 
-![Condensed Heatmaps](image/heatmap_CONDENSED_venues.html)
-![Separate Heatmaps](image/heatmap_separate_venues.html)
 
 The heatmap shows that the area right bellow the location of the Design Company concentrates the most services that the employees deem important, narrowing the selection of possible offices to:
  - Exente: 685, Market Street
@@ -119,8 +135,6 @@ When pinpointing all the venues to cover the staff requirements, it becomes evid
 To make the maintenace guy happy, a Basketball Stadium is within 2,5km as shown in the map.
 
 ![](image/final_plot.jpg)
-
-![Final Decision Map](image/narrowing_venues.html)
 
 ## Conclusion
 
